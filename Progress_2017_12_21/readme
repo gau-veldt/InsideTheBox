@@ -1,0 +1,7 @@
+
+This Zybo C64 project now supports keyboard input from a PS/2 keyboard.  For the keyboard to work a PS/2-PMOD6 accessory may be purchased from Digilent and plugged into the Zybo's JE PMOD port (pins 1-6).  Getting a PMOD12 to PMOD6 x 2 splitter cable is also recommended (a second PS/2-PMOD6 may also be purchased for connecting a PS/2 mouse to the second PMOD6 for future projects).
+
+One cable coming off the splitter has a little white-hashed line where it comes out from the connector.  This means it has pin 1 and thus is the correct PMOD6 (pins 1-6) for connecting the PS/2-PMOD6 and PS/2 keyboard to use for this project.  JE is the "slow" PMOD (resistor protection and unpaired inputs slow down maximum switching rate) and PS/2 is a fairly slow protocol (minimum clock period is 60 microseconds for a whole hot 16.6 kHz) so is a good PMOD port choice for the splitter and PS/2 accessories.
+
+The PS/2 clock on the "pin 1" cable will appear to the Zybo's PL at the JE signals (enable them in ZYBO_Master.xdc).
+
